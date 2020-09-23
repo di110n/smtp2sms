@@ -6,16 +6,16 @@ mdmrmbss=0              				#Reboot modem before sending sms (it needs uid=root)
 mdmrebootdelay=3        				#After reboot delay in seconds
 mdmpath='/dev/ttyUSB1'  				#Path to modem
 mdmcmd='AT+CFUN=1'      				#Reboot modem command
-domain='your.mail.domain.com'			#Maildomain
-smsd = 'smstools'						#SMSD service name (need it to restart smsd before rebooting the modem if modem does not respond)
-maxdelay = 59							#Maximum age of an oldest outgoing sms in directories below, if such sms exists modem is
-										#hanged up most likely
-maxlength = 300							#Message's max length
-log='/var/log/smstools/smtp2sms.log'	#Log file
-pidof='/bin/pidof'						#Path to pidof utility
+domain='your.mail.domain.com'				#Maildomain
+smsd = 'smstools'					#SMSD service name (need it to restart smsd before rebooting the modem if modem does not respond)
+maxdelay = 59						#Maximum age of an oldest outgoing sms in directories below, if such sms exists modem is
+							#hanged up most likely
+maxlength = 300						#Message's max length
+log='/var/log/smstools/smtp2sms.log'			#Log file
+pidof='/bin/pidof'					#Path to pidof utility
 python='/usr/bin/python'				#Path to Python
 
-dirs = ['/var/spool/sms/checked','/var/spool/sms/outgoing']		#Directories to check outgoing messages
+dirs = ['/var/spool/sms/checked','/var/spool/sms/outgoing']			#Directories to check outgoing messages
 subs={'sub1':'79001111111', 'sub2':'79002222222', 'grp1':['sub1','sub2']}	#Subscribers
 
 def donothing():
