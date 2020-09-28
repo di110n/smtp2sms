@@ -137,3 +137,4 @@ echo('Setting up new uid:gid for the process: ' + os.getuid().__str__() + ":" + 
 echo('smtp2sms is ready!')
 
 asyncore.loop()
+
