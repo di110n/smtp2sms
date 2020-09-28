@@ -10,12 +10,12 @@ import time
 import subprocess
 import smtp2smscfg as cfg
 
-port=cfg.port #25						#Listening port
-addr=cfg.addr #'0.0.0.0'				#Listening address
+port=cfg.port #25				#Listening port
+addr=cfg.addr #'0.0.0.0'			#Listening address
 app=cfg.app #'/usr/bin/sendsms'			#Path to sendsms script
-uid=cfg.uid #'smsd'						#Effective UID
-mdmrmbss=cfg.mdmrmbss #0				#Reboot modem before sending sms (it needs uid=root): 0=no, 1=yes
-mdmrebootdelay=cfg.mdmrebootdelay #3	#After reboot delay in seconds
+uid=cfg.uid #'smsd'				#Effective UID
+mdmrmbss=cfg.mdmrmbss #0			#Reboot modem before sending sms (it needs uid=root): 0=no, 1=yes
+mdmrebootdelay=cfg.mdmrebootdelay #3		#After reboot delay in seconds
 mdmpath=cfg.mdmpath #'/dev/ttyUSB1'		#Path to modem
 mdmcmd=cfg.mdmcmd #'AT+CFUN=1'			#Reboot modem command
 
