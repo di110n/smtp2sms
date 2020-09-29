@@ -36,7 +36,7 @@ class CustomSMTPServer(smtpd.SMTPServer):
         subj = re.sub(r'(=([A-Fa-f0-9]){2}){2}',cb2utf8,subj)
         subj = re.sub(r'=([A-Fa-f0-9]){2}',cb2utf8,subj)
         subj = subj.replace('=?UTF-8?Q?','').replace(r'?=','')
-        body = 'Subj: ' + subj  + '; Text: ' + body
+        body = subj  + ': ' + body
 
         if dom != domain:
             echo('Wrong domain!')

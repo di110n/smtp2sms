@@ -20,17 +20,17 @@ for x in dirs:
     print (ls.__len__())
     for y in ls:
 
-	mtime = round(os.stat(x+ "/" + y).st_mtime, 1)
-	now = round(time.time(), 1)
-	delta = round(now - mtime, 1)
-	print x + '/' + y + ' --- ' + mtime.__str__(), " --- ", now.__str__(), " --- ", delta.__str__()
+    mtime = round(os.stat(x+ "/" + y).st_mtime, 1)
+    now = round(time.time(), 1)
+    delta = round(now - mtime, 1)
+    print x + '/' + y + ' --- ' + mtime.__str__(), " --- ", now.__str__(), " --- ", delta.__str__()
 
-	if mintime == 0:
-	    mintime = mtime
-	    fname = x + '/' + y
-	elif mintime > mtime:
-	    mintime = mtime
-	    fname = x + '/' + y
+    if mintime == 0:
+        mintime = mtime
+        fname = x + '/' + y
+    elif mintime > mtime:
+        mintime = mtime
+        fname = x + '/' + y
 if mintime > 0: 
     now = round(time.time(), 1)
     delta = round(now - mintime, 1)
