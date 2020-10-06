@@ -13,7 +13,7 @@ maxdelay = 59						#Maximum age of an oldest outgoing sms in directories below, 
 maxlength = 300						#Message's max length
 log='/var/log/smstools/smtp2sms.log'			#Log file
 pidof='/bin/pidof'					#Path to pidof utility
-python='/usr/bin/python'				#Path to Python
+python='/usr/bin/python3'				#Path to Python
 
 dirs = ['/var/spool/sms/checked','/var/spool/sms/outgoing']			#Directories to check outgoing messages
 subs={'sub1':'79001111111', 'sub2':'79002222222', 'grp1':['sub1','sub2']}	#Subscribers
